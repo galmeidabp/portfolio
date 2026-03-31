@@ -28,8 +28,8 @@ export function Hero() {
 
           <div className='flex justify-center md:justify-start gap-2 mt-4'>
             <a href='mailto:galmeidabp@gmail.com' aria-label='Me envie um email' className='hover:bg-baby-pink p-2 rounded-full hover:scale-118'><Mail /></a>
-            <a href="https://github.com/galmeidabp" target='_blank' rel='noopener noreferrer' aria-label='Entre no meu Github' className='hover:bg-baby-pink p-2 rounded-full hover:scale-118'><FaGithub /></a>
-            <a href="https://www.linkedin.com/in/galmeidabp/" target='_blank' rel='noopener noreferrer' aria-label='Entre no meu LinkedIn' className='hover:bg-baby-pink p-2 rounded-full hover:scale-118'><FaLinkedin /></a>
+            <a href="https://github.com/galmeidabp" target='_blank' rel='noopener noreferrer' aria-label='Entre no meu Github' className='hover:bg-baby-pink w-10 h-10 p-2 rounded-full hover:scale-118'><FaGithub size={24} /></a>
+            <a href="https://www.linkedin.com/in/galmeidabp/" target='_blank' rel='noopener noreferrer' aria-label='Entre no meu LinkedIn' className='hover:bg-baby-pink w-10 h-10 p-2 rounded-full hover:scale-118'><FaLinkedin size={24} /></a>
           </div>
         </div>
 
