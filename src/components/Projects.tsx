@@ -18,14 +18,13 @@ export function Projects() {
     {
       title: "Galeria de Arte",
       image: "frgaleriadeartecover.png",
-      technology: ["Design (Figma)", "React", "Formspree", "Tailwind", "API", "Supabase", "Vercel"],
+      technology: ["Design (Figma)", "React", "Formspree", "Tailwind", "API"],
       description: [`Desenvolvimento de um site institucional com catálogo dinâmico para uma galeria de arte, focando na exibição de obras e conversão de visitantes em contatos comerciais.
         
         O cliente precisava de uma presença digital que funcionasse como vitrine, permitindo que os usuários navegassem pelas obras e entrassem em contato rapidamente.
         
         O sistema inclui: listagem dinâmica das obras com dados vindos do banco, páginas individuais com rotas dinâmicas baseadas em slug, filtros para facilitar a exploração, bem como uma barra de pesquisa, redirecionamento direto pra WhatsApp como principal canal de conversão e formulário de contato integrado.
-        
-        Também foram implementadas páginas institucionais (sobre a galeria) e páginas de políticas, garantindo maior credibilidade e completude ao projeto.
+
         `],
       link: "https://fr-galeria-de-arte.vercel.app/",
     },
@@ -34,15 +33,12 @@ export function Projects() {
       image: "avanccecoursecover.png",
       technology: ["Design (Figma)", "Next.js", "Tailwind", "Typescript", "Markdown", "Gray-Matter", "fs e path"],
       description: [
-        `Desenvolvimento de um site-blog utilizando Next.js, com foco em performance, SEO e organização de conteúdo técnico.
+        `Desenvolvimento de um blog em Next.js com foco em performance, SEO e organização de conteúdo técnico.
 
-        A proposta foi construir uma aplicação onde todos os posts são escritos em Markdown e gerados estaticamente durante o build, garantindo carregamento rápido e estabilidade, já que o conteúdo não sofre atualizações frequentes.
+        Os posts são escritos em Markdown e gerados estaticamente durante o build por meio de Static Site Generation (SSG), com rotas dinâmicas baseadas em arquivos locais, garantindo carregamento rápido e estabilidade.
 
-        Para isso, foi utilizada a abordagem de Static Site Generation (SSG), com geração de rotas dinâmicas a partir dos arquivos locais, permitindo que cada post fosse pré-renderizado.
-
-        O sistema de conteúdo foi estruturado com Markdown e Gray-Matter para separação de metadados, enquanto remark e rehype foram utilizados para conversão do conteúdo em HTML.
-
-        Além disso, a aplicação faz uso de módulos nativos do Node.js (fs e path) para leitura dos arquivos, junto com Tailwind CSS para estilização e TypeScript para maior segurança e previsibilidade no desenvolvimento.`
+        O conteúdo foi estruturado com Markdown e Gray-Matter para gerenciamento de metadados, enquanto Remark e Rehype realizam a conversão para HTML. A aplicação também utiliza os módulos fs e path do Node.js para leitura dos arquivos e TypeScript para maior segurança e previsibilidade no desenvolvimento.
+        `
       ],
       link: "https://avanccecourse.vercel.app/",
     },
@@ -56,10 +52,6 @@ export function Projects() {
         A proposta foi criar um formulário com validação completa dos dados e atualização visual em tempo real, refletindo as informações diretamente no cartão exibido na interface.
 
         A aplicação foi estruturada como uma SPA com duas rotas principais: uma para entrada de dados e outra para confirmação, garantindo uma experiência fluida e responsiva em diferentes dispositivos.
-
-        Para o gerenciamento de estado entre as páginas, foi utilizada a Context API, permitindo o compartilhamento dos dados do formulário de forma consistente ao longo da navegação.
-
-        A validação foi implementada com React Hook Form em conjunto com Zod, garantindo controle preciso dos campos e mensagens de erro, enquanto o recurso de watch foi utilizado para atualizar os componentes dinamicamente conforme o usuário digita.
 
         O projeto também priorizou boas práticas de componentização e responsividade, utilizando Tailwind CSS com abordagem mobile-first.`
       ],
@@ -131,7 +123,10 @@ export function Projects() {
               <div>
                 <img src={`${import.meta.env.BASE_URL}/${selectedProject.image}`} alt={`Imagem do projeto ${selectedProject.title}`} />
 
+                <a target="_blank" rel="noopener noreferrer" className="underline flex items-center gap-2 text-baby-pink mt-10 hover:text-baby-pink/80" href={selectedProject.link}>Abrir site <SquareArrowOutUpRight /></a>
+
                 <div className="flex flex-wrap py-4 gap-2 text-xs md:text-sm">
+                  
                   {selectedProject.technology.map((tech) => (
 
                     <div
@@ -151,7 +146,7 @@ export function Projects() {
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
-                <a target="_blank" rel="noopener noreferrer" className="underline flex items-center gap-2 text-baby-pink mt-10 hover:text-baby-pink/80" href={selectedProject.link}>Abrir site <SquareArrowOutUpRight /></a>
+                
               </div>
             </div>
 

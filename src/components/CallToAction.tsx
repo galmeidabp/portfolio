@@ -57,7 +57,7 @@ export function CallToAction() {
         <button
           type="submit"
           disabled={state.submitting}
-          className="bg-baby-pink flex w-60 items-center gap-4 px-6 py-4 rounded-4xl disabled:opacity-50"
+          className="bg-baby-pink flex w-60 items-center gap-4 px-6 py-4 rounded-4xl disabled:opacity-50 hover:bg-baby-pink/80 hover:cursor-pointer" 
         >
           {state.submitting ? "Enviando..." : "Enviar mensagem"}
           <Send size={18} />
